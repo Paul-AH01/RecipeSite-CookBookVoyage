@@ -3,6 +3,7 @@ import "./App.css";
 import NavBar from "./Components/Navbar.js";
 import cake from './images/cake.png';
 
+
 function App() {
   return (
     <div className="App">
@@ -20,6 +21,11 @@ function App() {
         <li><a href="#recipes">Recipes</a></li>
         <li><a href="#popular">Popular</a></li>
        </ul>
+
+       <div className="search-bar">
+          <input type="text"placeholder="Search..." />
+          <button type="submit">Go</button>
+       </div>
       </div>
 
       <div className="recipe-card-container">
