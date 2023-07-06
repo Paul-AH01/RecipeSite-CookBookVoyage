@@ -13,6 +13,9 @@ function NavBar() {
             <Nav.Link href="#recipes">Recipes</Nav.Link>
           </Nav>
         </Navbar.Collapse>
+        {/* <div className="searchfunction">
+       <label>Search</label>
+       <input type="text">       */}
       </Navbar>
       );
     };
