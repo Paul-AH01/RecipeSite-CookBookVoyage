@@ -1,13 +1,17 @@
 :root {
-  background-image: url("https://images.unsplash.com/photo-1688354145452-08626a2d1424?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1364&q=80");
+  width: 100%;
+  height: 100%;
+  /* background-image: url("https://images.unsplash.com/photo-1505935428862-770b6f24f629?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1167&q=80"); */
 }
 
 .App {
   width: 100%;
-  height: 100%;
+  height: 100vh;
   text-align: center;
-  background-image: url("https://images.unsplash.com/photo-1688354145452-08626a2d1424?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1364&q=80");
-
+  background-image: url("https://images.unsplash.com/photo-1505935428862-770b6f24f629?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1167&q=80");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 .nav-bar {
@@ -55,15 +59,37 @@
   color: #000000;
 }
 
+.recipe-card-overview {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+  
+}
+
+/* This contains the thumbnails of the recipes */
 .recipe-card-container {
   display: flex;
   width: 200px;
   height: 300px;  
   flex-direction: row;
-  background: #fff;
+  background: #cfcfcf;
   margin: 20px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  animation: fade-in 1s ease-in-out;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .recipe-card-image {
