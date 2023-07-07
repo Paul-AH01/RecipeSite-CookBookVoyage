@@ -1,55 +1,112 @@
 import React from "react";
 import "./App.css";
 import NavBar from "./Components/Navbar.js";
-import cake from './images/cake.png';
+import cake from "./images/cake.png";
 
 
 function App() {
   return (
     <div className="App">
-      <div className="top-background">
+      <div className="top-background"> 
         <h1 className="top-background-text">Cook Book Voyage</h1>
       </div>
-      {/* <div className="nav-bar">
-        <NavBar />
-      </div> */}
-
+      
+      {/* below is the code for the navbar using the ul and li tags */}
       <div className="navbar">
-       <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#profile">Profile</a></li>
-        <li><a href="#recipes">Recipes</a></li>
-        <li><a href="#popular">Popular</a></li>
-       </ul>
-
-       <div className="search-bar">
-          <input type="text"placeholder="Search..." />
+        <ul>
+          <li>
+            <a href="#home">Home</a>
+          </li>
+          <li>
+            <a href="#profile">Profile</a>
+          </li>
+          <li>
+            <a href="#recipes">Recipes</a>
+          </li>
+          <li>
+            <a href="#popular">Popular</a>
+          </li>
+        </ul>
+      {/* below is the code for the search bar using the input and button tags  */}
+        <div className="search-bar">
+          <input type="text" placeholder="Search..." />
           <button type="submit">Go</button>
-       </div>
-      </div>
-
-      <div className="recipe-card-container">
-        <div className="recipe-card">
-          <div className="recipe-card-image">
-            {/* <img src={cake} alt="this is cake" /> */}
-            <div className="recipe-card-title">
-              
-              Cake
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className="recipe-card-container">
-        <div className="recipe-card">
-          <div className="recipe-card-image">
-            <div className="recipe-card-title">
-              <img src="cake.png" alt="" />
-              Cake
-            </div>
-          </div>
         </div>
       </div>
       
+      {/* These contain the recipe thumbnails */}
+      <div className="recipe-card-overview">
+        <div className="recipe-card-container">
+          <div className="recipe-card">
+            <div className="recipe-card-image">
+              <div className="recipe-card-title">Toast with Blueberries</div>
+            </div>
+          </div>
+        </div>
+        <div className="recipe-card-container">
+          <div className="recipe-card">
+            <div className="recipe-card-image">
+              <div className="recipe-card-title">Blackberry Popsicle</div>
+            </div>
+          </div>
+        </div>
+        <div className="recipe-card-container">
+          <div className="recipe-card">
+            <div className="recipe-card-image">
+              <div className="recipe-card-title">Stacked Burger</div>
+            </div>
+          </div>
+        </div>
+        <div className="recipe-card-container">
+          <div className="recipe-card">
+            <div className="recipe-card-image">
+              <div className="recipe-card-title">Shrimp Noodles</div>
+            </div>
+          </div>
+        </div>
+        <div className="recipe-card-container">
+          <div className="recipe-card">
+            <div className="recipe-card-image">
+              <div className="recipe-card-title">Meatballs</div>
+            </div>
+          </div>
+        </div>
+        <div className="recipe-card-container">
+          <div className="recipe-card">
+            <div className="recipe-card-image">
+              <div className="recipe-card-title">Rasberry Cake</div>
+            </div>
+          </div>
+        </div>
+        <div className="recipe-card-container">
+          <div className="recipe-card">
+            <div className="recipe-card-image">
+              <div className="recipe-card-title">Oreo Cookie Dessert</div>
+            </div>
+          </div>
+        </div>
+        <div className="recipe-card-container">
+          <div className="recipe-card">
+            <div className="recipe-card-image">
+              <div className="recipe-card-title">Chicken Strips</div>
+            </div>
+          </div>
+        </div>
+        <div className="recipe-card-container">
+          <div className="recipe-card">
+            <div className="recipe-card-image">
+              <div className="recipe-card-title">Toast with Blueberries</div>
+            </div>
+          </div>
+        </div>
+        <div className="recipe-card-container">
+          <div className="recipe-card">
+            <div className="recipe-card-image">
+              <div className="recipe-card-title">Toast with Blueberries</div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
