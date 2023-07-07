@@ -40,6 +40,7 @@ function App() {
           <div className="recipe-card">
             <div className="recipe-card-image">
               <div className="recipe-card-title">Toast with Blueberries</div>
+              <div className="cookingtime"> </div>
             </div>
           </div>
         </div>
@@ -47,6 +48,7 @@ function App() {
           <div className="recipe-card">
             <div className="recipe-card-image">
               <div className="recipe-card-title">Blackberry Popsicle</div>
+              <div className="cookingtime"> </div>
             </div>
           </div>
         </div>
@@ -54,6 +56,7 @@ function App() {
           <div className="recipe-card">
             <div className="recipe-card-image">
               <div className="recipe-card-title">Stacked Burger</div>
+              <div className="cookingtime"> </div>
             </div>
           </div>
         </div>
@@ -61,6 +64,7 @@ function App() {
           <div className="recipe-card">
             <div className="recipe-card-image">
               <div className="recipe-card-title">Shrimp Noodles</div>
+              <div className="cookingtime"> </div>
             </div>
           </div>
         </div>
@@ -68,6 +72,7 @@ function App() {
           <div className="recipe-card">
             <div className="recipe-card-image">
               <div className="recipe-card-title">Meatballs</div>
+              <div className="cookingtime"> </div>
             </div>
           </div>
         </div>
@@ -75,6 +80,7 @@ function App() {
           <div className="recipe-card">
             <div className="recipe-card-image">
               <div className="recipe-card-title">Rasberry Cake</div>
+              <div className="cookingtime"> </div>
             </div>
           </div>
         </div>
@@ -82,6 +88,7 @@ function App() {
           <div className="recipe-card">
             <div className="recipe-card-image">
               <div className="recipe-card-title">Oreo Cookie Dessert</div>
+              <div className="cookingtime"> </div>
             </div>
           </div>
         </div>
@@ -89,6 +96,7 @@ function App() {
           <div className="recipe-card">
             <div className="recipe-card-image">
               <div className="recipe-card-title">Chicken Strips</div>
+              <div className="cookingtime"> </div>
             </div>
           </div>
         </div>
@@ -96,6 +104,7 @@ function App() {
           <div className="recipe-card">
             <div className="recipe-card-image">
               <div className="recipe-card-title">Toast with Blueberries</div>
+              <div className="cookingtime"></div> 
             </div>
           </div>
         </div>
@@ -103,6 +112,7 @@ function App() {
           <div className="recipe-card">
             <div className="recipe-card-image">
               <div className="recipe-card-title">Toast with Blueberries</div>
+               <div className="cookingtime"> </div>
             </div>
           </div>
         </div>
