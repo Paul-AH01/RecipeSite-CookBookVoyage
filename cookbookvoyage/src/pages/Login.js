@@ -33,8 +33,15 @@
 //           <button type="submit">Go</button>
 //         </div>
 //       </div>
-//       <form> 
-//         <label for="email">Username</label>
-//         <input type="email" placeholder="youremail@mail.com" id="email" name="email">
+
+
+//       <form onSubmit={handleSubmit}> 
+//         <label for="username">Username</label>
+//<input type="username" placeholder="username" id="username" name="Username">
+//<label for="email">E-mail</label>
+//         <input value={email} onChange={(e) => setEmail(e.target.value)type="email" placeholder="youremail@mail.com" id="email" name="email">
 //             <label for="Password">Password</label>
-//             <input type="Password" placeholder="*******" id="password" name="password">
+//             <input value={pass} onChange={(e) => setPass(e.target.value)} type="Password" placeholder="*******" id="password" name="password">
+//<button type="submit">Login</button> </form>
+//<Button>Dont have an account yet? Register here </button>
+//
