@@ -27,4 +27,4 @@ return(
 }
 export default LoginForm
 
-//I added some closing tags to help with the errors//Thank you :) 
+ 
