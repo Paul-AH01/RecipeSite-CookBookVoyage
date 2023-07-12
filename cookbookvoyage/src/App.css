@@ -131,3 +131,26 @@ ul {
   margin: 0;
   padding: 0;
 }
+
+/* Registration Specific Styling */
+#firstName {
+  padding: 0%;
+}
+
+#surName {
+  padding: 0%;
+}
+
+#email {
+  padding: 0%;
+}
+
+#password {
+  padding: 0%;
+}
+
+#confirmPassword {
+  padding: 0%;
+}
+
+/* Login Page Specific Styling */
