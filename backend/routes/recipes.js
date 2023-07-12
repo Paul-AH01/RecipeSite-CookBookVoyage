@@ -1,24 +1,41 @@
-// const express = require('express');
-// const router = express.Router();
+import express from "express";
+import mongoose from "mongoose";
 
-// // this is the crud( create, read, update, delete) for the recipes
-// router.get('/', (req, res, next ) => {
-    
+import { RecipeModel } from "../models/Recipes.js";
+
+const router = express.Router();
+
+router.get("/", async (req, res) => {
+    try {
+        const response = await RecipeModel.find({});     
+        res.json(response);
+    } catch (err) {
+        res.json(err);
+    }
+});
+
+router.post("/", async (req, res) => {
+    const recipe = new RecipeModel(req.body);
+    try {
+        const response = await recipe.save();
+        res.json(response);
+    } catch (err) {
+        res.json(err);
+    }
+});
+
+// router.put("/", async (req, res) => {  
+//     try {
+//         const recipe = await RecipeModel.findById(req.body.recipeId);
+//         const user = await UserModel.findById(req.body.userId);
+//         user.savedRecipes.push(recipe);   
+//         await user.save();
+//         res.json({savedRecipes: user.savedRecipes});
+//     } catch (err) {
+//         res.json(err);
+//     }
+
 // });
 
-// router.post('/', (req, res, next) => { 
-//     const recipeData = req.body;
-//     const recipe = new Recipe(recipeData);
-//     recipe.push(recipe);
-//     res.status(201).json({
-//         message: 'Recipe added successfully'
-//     });  
-// });
+export { router as recipesRouter };
 
-// router.put('/', (req, res, next) => {
-
-// });
-
-// router.delete('/', (req, res, next) => {
-
-// });
