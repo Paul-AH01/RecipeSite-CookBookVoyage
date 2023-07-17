@@ -1,22 +1,31 @@
 import express from 'express';
 import cors from 'cors';
 import mongoose from 'mongoose';
+import dotenv from 'dotenv';
 
 import { userRouter } from '../routes/users.js';
 import { recipesRouter } from '../routes/recipes.js';
-const PORT = 3001;
+
+const PORT = process.env.PORT || 3001;
+
+dotenv.config();
 
 const app = express();
 
+
 app.use(express.json());
+
 app.use(cors());
 
 app.use('/authenticate', userRouter);
 app.use('/recipes', recipesRouter);
 
-mongoose.connect('mongodb+srv://johnkedingamedev:7xg9HD0axBrHekLb@recipes.2pcuo6e.mongodb.net/recipes?retryWrites=true&w=majority', {
+mongoose.connect(process.env.REACT_APP_DB_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
 
-app.listen(PORT, () => console.log('Server running on port 3001'));
+// this will start the server
+app.listen(PORT, () => {
+  console.log('Server running on port: ' + PORT)
+});
