@@ -1,5 +1,6 @@
 import mongoose from "mongoose";
 
+// a schema is the structure of the data, this one is for recipes,
 const RecipeSchema = new mongoose.Schema({
     name: {
         type: String,
@@ -33,6 +34,7 @@ const RecipeSchema = new mongoose.Schema({
         type: String,
         required: true,
     },
+    // this is the user id that will be used to link the recipe to the user
     userId: {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'users', 

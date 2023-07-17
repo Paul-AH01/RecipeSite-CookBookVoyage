@@ -94,6 +94,7 @@ export const AddRecipes = () => {
           );
         })}
         <button onClick={addIngredient} type="button" >Add Ingredient</button>
+        <label htmlFor="instructions">Cooking Method</label>
         <textarea
           name="instructions"
           id="instructions"
