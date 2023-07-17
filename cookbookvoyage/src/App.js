@@ -1,12 +1,13 @@
 import React from "react";
 import "./App.css";
+// below is the code that was used to create the navigation bar.
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Home } from "./pages/Home";
 import { Auth } from "./pages/auth";
 import { AddRecipes } from "./pages/add-recipes";
 import { NavBar } from "./components/Navbar";
 
-
+// this function is used to create app.
 function App() {
   return (
     <div className="App">
@@ -14,6 +15,7 @@ function App() {
         <h1 className="top-background-text">Cook Book Voyage</h1>
       </div>
 
+      {/* this is the code that is used to create the navigation throughout the website. */}
       <Router>
         <NavBar />
         <Routes>
