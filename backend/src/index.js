@@ -28,4 +28,6 @@ mongoose.connect(process.env.REACT_APP_DB_URI, {
 // this will start the server
 app.listen(PORT, () => {
   console.log('Server running on port: ' + PORT)
+
 });
+
