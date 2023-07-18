@@ -59,4 +59,3 @@ router.get("/", async (req, res) => {
 });
 
 export { router as recipesRouter };
-
