@@ -1,3 +1,4 @@
+import React from 'react';
 import { Link } from 'react-router-dom';
 import { useCookies } from "react-cookie";
 import { useNavigate } from "react-router-dom";
@@ -10,7 +11,7 @@ export const NavBar = () => {
     // it will clear the access_token cookie and remove the userID from localStorage
     const handleLogout = () => {
         setCookie("access_token", "");
-        window.localStorage.removeItem("userID")
+        window.localStorage.removeItem("userID");
         navigate("/auth");
     };
 
@@ -19,12 +20,13 @@ export const NavBar = () => {
     // otherwise it will display a logout button.
     return (        
         <div className="navbar">
-            < Link to="/">Home</Link> 
-            < Link to="/add-recipes">Add Recipes</Link>
-            {!cookies.access_token ?( < Link to="/auth">Login/Register</Link>) : 
-            <button onClick={handleLogout} className='logoutBtn'>Logout</button>
-            }
-
+            <Link to="/">Home</Link>
+            {cookies.access_token && <Link to="/add-recipes">Add Recipes</Link>}
+            {!cookies.access_token ? (
+                <Link to="/auth">Login/Register</Link>
+            ) : (
+                <button onClick={handleLogout} className='logoutBtn'>Logout</button>
+            )}
         </div>
     )
 };
