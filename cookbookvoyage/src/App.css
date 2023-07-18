@@ -18,7 +18,7 @@
   margin: 0;
   width: 100%;
   height: 40px;
-  background-color: #FF5053;
+  background-color: #ff5053;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -42,7 +42,7 @@ a {
 
 .login,
 .register {
-  background-color: #55A3A5;
+  background-color: #55a3a5;
   border-radius: 8px;
   padding: 20px;
   box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.15);
@@ -59,14 +59,14 @@ a {
   margin: 0;
   width: 10%;
   height: 40px;
-  background-color: #FF5053;
-  border: none;  
+  background-color: #ff5053;
+  border: none;
   color: rgb(0, 0, 0);
   text-decoration: none;
 }
 
 .logoutBtn:hover {
-  background-color: #FF5053;
+  background-color: #ff5053;
   cursor: pointer;
 }
 
@@ -74,6 +74,11 @@ h2 {
   margin-bottom: 20px;
   color: #333;
   text-align: center;
+}
+
+.recipe-container {
+  display: flex;
+  justify-content: center;
 }
 
 .add-recipe {
@@ -85,20 +90,28 @@ h2 {
 }
 
 /* make recipe card container */
-.recipe-container {
-  display: flex;
-  justify-content: center;
-}
 
 .recipe-cards-container {
   display: flex;
+  /* background-color: #f2dd91; */
+  flex-wrap: wrap;
   list-style: none;
   padding: 0;
   margin: 20px;
 }
 
+.recipe-cards-container li {
+  height: auto;
+  background-color: #56a3a6;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 10px;
+  margin-bottom: 20px;
+}
+
 .recipe-card {
-  margin: 0 10px 20px; /* Added 20px margin at the bottom */
+  margin: 0 10px 20px; 
   background-color: #f9f9f9;
   border-radius: 5px;
   padding: 20px;
@@ -108,6 +121,10 @@ h2 {
 .recipe-name {
   text-align: center;
   margin-bottom: 10px;
+  background-color: #f2dd91;
+  box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  text-transform: capitalize;  
 }
 
 .recipe-details {
@@ -117,17 +134,17 @@ h2 {
 }
 
 .recipe-details img {
-  width: 100%;
-  max-width: 300px;
-  height: auto;
-  margin-bottom: 10px;
+  background: #34495e;
+  border: 2px solid #ffffff;
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
 }
+
 
 .recipe-details p {
   margin: 5px 0;
 }
-
-
 
 form {
   display: flex;
@@ -170,7 +187,7 @@ input[type="submit"]:hover {
 
 .search-bar button {
   padding: 8px 16px;
-  background-color: #3A5743;
+  background-color: #3a5743;
   color: white;
   border: none;
   border-radius: 4px;
@@ -188,7 +205,7 @@ input[type="submit"]:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #F2DD91;
+  background: #f2dd91;
 }
 
 .top-background h1 {
