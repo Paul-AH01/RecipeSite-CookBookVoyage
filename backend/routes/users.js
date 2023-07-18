@@ -31,16 +31,13 @@ router.post("/login", async (req, res) => {
     return res.json({ message: "User does not exist" });
   }
 
-  // will use bcrypt to compare the password that the user entered, with the
-    // password that is stored in the database.
   const isPasswordCorrect = await bcrypt.compare(password, user.password);
 
   if (!isPasswordCorrect) {
     return res.json({ message: "Username or Password is incorrect" });
   }
 
-  // if the user exists, and the password is correct, we will create a token
-    // using the jsonwebtoken library, and return the token, and the user id.
+
   const token = jwt.sign({ id: user._id }, "secret");
   res.json({ token, userID: user._id });
 });
