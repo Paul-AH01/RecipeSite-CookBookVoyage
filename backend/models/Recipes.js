@@ -35,12 +35,18 @@ const RecipeSchema = new mongoose.Schema({
         required: true,
     },
     // this is the user id that will be used to link the recipe to the user
-    userId: {
+    userID: {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'users', 
         required: true
-    }
-
+    },
+    userRatings: [
+        {
+            type: mongoose.Schema.Types.ObjectId,
+            ref: 'ratings',
+            required: true
+        }
+    ]
 });
 
 export const RecipeModel = mongoose.model('recipes', RecipeSchema);

@@ -61,11 +61,12 @@ export const Profile = () => {
                 <img src={recipe.imageUrl} alt={recipe.name} />
               </div>
               <div>
-                <form
+                <form className="ratings-form"
                   onSubmit={(event) => handleRatingSubmit(event, recipe._id)}
                 >
-                  <label htmlFor="rating"> Rating: (1-5) </label>
+                  <label htmlFor="rating" className="ratings-text" > Rating: (1-5) </label>
                   <input
+                    className="ratings-input"
                     type="number"
                     id="rating"
                     name="rating"
@@ -74,7 +75,7 @@ export const Profile = () => {
                     value={ratingValue}
                     onChange={(event) => setRatingValue(event.target.value)}
                   />
-                  <button type="submit">Submit Rating</button>
+                  <button type="submit" className="rating-submit">Submit Rating</button>
                 </form>
               </div>
               {isClickedRecipe && (
