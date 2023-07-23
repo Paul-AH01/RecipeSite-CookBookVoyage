@@ -6,6 +6,7 @@ import { Home } from "./pages/Home";
 import { Auth } from "./pages/auth";
 import { AddRecipes } from "./pages/add-recipes";
 import { NavBar } from "./Components/Navbar";
+import { Profile } from "./pages/profile";
 
 // this function is used to create app.
 function App() {
@@ -22,6 +23,7 @@ function App() {
           <Route path="/" element={<Home />} /> 
           <Route path="/auth" element={<Auth />} />
           <Route path="/add-recipes" element={<AddRecipes />} />
+          <Route path="/profile" element={<Profile />} />
         </Routes>
       </Router>
       

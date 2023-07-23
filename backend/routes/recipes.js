@@ -24,37 +24,50 @@ router.post("/", async (req, res) => {
     }
 });
 
-router.put("/", async (req, res) => {  
+router.put("/", async (req, res) => {
     try {
-        const recipe = await RecipeModel.findById(req.body.recipeId);
-        const user = await UserModel.findById(req.body.userId);
-        user.savedRecipes.push(recipe);   
-        await user.save();
-        res.json({savedRecipes: user.savedRecipes});
+      const { recipeId, userID } = req.body;
+  
+      const user = await UserModel.findById(userID);
+      if (!user) {
+        return res.json({ message: "User not found" });
+      }
+  
+      const recipe = await RecipeModel.findById(recipeId);
+      if (!recipe) {
+        return res.json({ message: "Recipe not found" });
+      }
+  
+      if (user.savedRecipes.includes(recipeId)) {
+        return res.json({ message: "Recipe already saved" });
+      }
+       
+      user.savedRecipes.push(recipeId);
+      await user.save();
+  
+      res.json({ savedRecipes: user.savedRecipes });
+    } catch (err) {
+      res.json(err);
+    }
+  });
+
+router.get("/savedRecipes/id/:userID", async (req, res) => {
+    try {
+        const user = await UserModel.findById(req.params.userID);
+        res.json({ savedRecipes: user.savedRecipes });
     } catch (err) {
         res.json(err);
     }
-
 });
 
-router.get("/:id", async (req, res) => {
+router.get("/savedRecipes/:userID", async (req, res) => {
     try {
-        const user = await UserModel.findById(req.body.userId);           
-        res.json({savedRecipes: user?.savedRecipes});
-    } catch (err) {
-        res.json(err);
-    }
-});
-
-router.get("/", async (req, res) => {
-    try {
-        const user = await UserModel.findById(req.body.userId);  
+        const user = await UserModel.findById(req.params.userID);
         const savedRecipes = await RecipeModel.find({
-            _id: {$in: user.savedRecipes}
-        });        
-        res.json({ savedRecipes });
+            _id: { $in: user.savedRecipes },
+        });
+        res.json(savedRecipes);
     } catch (err) {
-        res.json(err);
     }
 });
 
