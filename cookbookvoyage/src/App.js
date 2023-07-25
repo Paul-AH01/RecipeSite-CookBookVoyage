@@ -8,6 +8,11 @@ import { AddRecipes } from "./pages/add-recipes";
 import { NavBar } from "./Components/Navbar";
 import { Profile } from "./pages/profile";
 
+constructor(); {
+  super();
+  this.baseURL = "https://cookbookvoyage.onrender.com/";
+}; 
+
 // this function is used to create app.
 function App() {
   return (

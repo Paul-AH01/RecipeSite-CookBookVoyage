@@ -15,7 +15,12 @@ const app = express();
 
 app.use(express.json());
 
-app.use(cors());
+app.use(cors({
+  origin:(
+    "https://https://cookbookvoyage.onrender.com",
+  )
+})
+);
 
 app.use('/authenticate', userRouter);
 app.use('/recipes', recipesRouter);
