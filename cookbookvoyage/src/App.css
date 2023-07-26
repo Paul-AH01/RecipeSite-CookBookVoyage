@@ -1,12 +1,16 @@
+/* Global styles */
+
 :root {
   /* Your mechanical-style color palette */
-  --primary-color: #2A3138;
-  --secondary-color: #D4D4D4;
-  --accent-color: #B3B3B3;
-  --button-color: #FF6347;
-  --button-hover-color: #FF3B20;
+  --primary-color: #2a3138;
+  --secondary-color: #d4d4d4;
+  --accent-color: #b3b3b3;
+  --button-color: #ff6347;
+  --button-hover-color: #ff3b20;
   --font-family: "Roboto", sans-serif;
 }
+
+
 body {
   margin: 0;
   font-family: "Arial", sans-serif;
@@ -21,7 +25,9 @@ body {
   background-size: cover;
   background-position: center;
 }
+
 /* Background and Layout styles */
+
 .App {
   width: 100%;
   height: 100vh;
@@ -30,32 +36,46 @@ body {
   background-size: cover;
   background-position: center;
 }
+
 .navbar {
   width: 100%;
   height: 40px;
-  background-color: #FF5053;
+  background-color: #ff5053;
   display: flex;
   justify-content: space-between;
   align-items: center;
   color: rgb(0, 0, 0);
   text-decoration: none;
 }
+
+.hidden {
+  display: none;
+} 
+
 a {
   color: rgb(0, 0, 0);
   text-decoration: none;
   margin: 10px;
   font-size: 25px;
 }
+
+.activeLink {
+  font-weight: bold;
+  color: #55a3a5;
+}
+
 /* Authentication styles */
+
 .auth {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 10%;
 }
+
 .login,
 .register {
-  background-color: #55A3A5;
+  background-color: #55a3a5;
   border-radius: 8px;
   padding: 20px;
   box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.15);
@@ -63,10 +83,12 @@ a {
   height: auto;
   border-top: 20px solid #333;
 }
+
 /* Button styles */
+
 .bookmark-button {
-  background: linear-gradient(to right, #6AC5B7, #44D8B7);
-  color: #FFFFFF;
+  background: linear-gradient(to right, #6ac5b7, #44d8b7);
+  color: #ffffff;
   font-size: 18px;
   font-weight: bold;
   padding: 12px 24px;
@@ -80,6 +102,7 @@ a {
   position: relative;
   z-index: 1;
 }
+
 .bookmark-button::before {
   content: "";
   position: absolute;
@@ -87,53 +110,63 @@ a {
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to right, #4BC8B3, #32D2C0);
+  background: linear-gradient(to right, #4bc8b3, #32d2c0);
   transition: left 0.3s ease;
   z-index: -1;
 }
+
 .bookmark-button:hover {
-  background: linear-gradient(to right, #58C5AF, #3ED7C1);
+  background: linear-gradient(to right, #58c5af, #3ed7c1);
   transform: translateY(-2px);
   box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
 }
+
 .bookmark-button::before {
   left: 0;
 }
+
 .bookmark-button:active {
-  background: linear-gradient(to right, #4BC2B3, #30D0BD);
+  background: linear-gradient(to right, #4bc2b3, #30d0bd);
   transform: translateY(0);
   box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.3);
 }
+
 .bookmark-button span {
   position: relative;
   z-index: 2;
 }
+
 /* Ratings styles */
-.rating-form {
+
+/* .rating-form {
   display: flex;
   align-items: center;
   gap: 10px;
   font-family: "Arial", sans-serif;
 }
+
 .ratings-text {
   font-size: 18px;
   color: #333;
 }
+
 .ratings-input {
   padding: 8px 12px;
   font-size: 16px;
-  border: 2px solid #4BC8B3;
+  border: 2px solid #4bc8b3;
   border-radius: 6px;
   outline: none;
   transition: border-color 0.3s ease;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
+
 .ratings-input:focus {
-  border-color: #55A3A5;
+  border-color: #55a3a5;
 }
+
 .rating-submit {
   padding: 12px 20px;
-  background-color: #4BC8B3;
+  background-color: #4bc8b3;
   color: #fff;
   font-size: 18px;
   border: none;
@@ -143,12 +176,15 @@ a {
   text-transform: uppercase;
   letter-spacing: 1px;
 }
+
 .rating-submit:hover {
-  background-color: #32D2C0;
+  background-color: #32d2c0;
   transform: scale(1.05);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-}
+} */
+
 /* Logout button styles */
+
 .logoutBtn {
   display: flex;
   justify-content: flex-end;
@@ -157,48 +193,58 @@ a {
   margin: 0;
   width: 10%;
   height: 40px;
-  background-color: #FF5053;
+  background-color: #ff5053;
   border: none;
   color: rgb(0, 0, 0);
   text-decoration: none;
 }
+
 .logoutBtn:hover {
-  background-color: #FF5053;
+  background-color: #ff5053;
   cursor: pointer;
 }
+
 /* Typography styles */
+
 h2 {
   margin-bottom: 20px;
   color: #333;
   text-align: center;
 }
+
 /* Recipe container styles */
+
 .recipe-container {
   display: flex;
   justify-content: center;
 }
+
 .add-recipe {
   width: 400px;
   margin: 0 auto;
   padding: 20px;
-  background-color: #56A3A6;
+  background-color: #56a3a6;
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   margin-top: 20px;
 }
+
 .add-recipe h2 {
   margin-bottom: 20px;
   color: #333;
   text-align: center;
 }
+
 .add-recipe form {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
+
 .add-recipe label {
   margin-bottom: 10px;
 }
+
 .add-recipe input[type="text"],
 .add-recipe input[type="password"] {
   padding: 8px;
@@ -206,6 +252,7 @@ h2 {
   border-radius: 4px;
   font-size: 14px;
 }
+
 .add-recipe input[type="submit"] {
   padding: 10px 20px;
   background-color: #333;
@@ -215,18 +262,22 @@ h2 {
   font-size: 14px;
   cursor: pointer;
 }
+
 .add-recipe input[type="submit"]:hover {
   background-color: #555;
 }
+
 .add-recipe-name {
   text-align: center;
   margin-bottom: 10px;
-  background-color: #F2DD91;
+  background-color: #f2dd91;
   box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.1);
   border-radius: 5px;
   text-transform: capitalize;
 }
+
 /* Recipe cards styles */
+
 .recipe-cards-container {
   display: flex;
   flex-wrap: wrap;
@@ -234,59 +285,71 @@ h2 {
   padding: 0;
   margin: 20px;
 }
+
 .recipe-cards-container li {
   width: 300px;
   height: auto;
-  background-color: #56A3A6;
+  background-color: #56a3a6;
   border-radius: 5px;
   padding: 20px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   margin: 10px;
   margin-bottom: 20px;
 }
+
 .recipe-card {
   margin: 0 10px 20px;
 }
+
 .recipe-name {
   text-align: center;
   margin-bottom: 10px;
-  background-color: #F2DD91;
+  background-color: #f2dd91;
   box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.1);
   border-radius: 5px;
   text-transform: capitalize;
 }
+
 .recipe-details {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+
 .recipe-details img {
-  background: #34495E;
-  border: 2px solid #FFFFFF;
+  background: #34495e;
+  border: 2px solid #ffffff;
   width: 200px;
   height: 200px;
   object-fit: cover;
   border-radius: 5px;
 }
+
 .recipe-details p {
   margin: 5px 0;
 }
+
 /* Recipe description styles */
+
 .recipe-details .description {
   color: #333;
   font-size: 16px;
   text-align: justify;
 }
+
 /* Recipe tags or categories styles */
+
 .recipe-details .tags {
   margin-top: 10px;
   color: #555;
   font-size: 14px;
 }
+
 /* "Read More" button styles */
+
 .recipe-details .read-more-button {
   margin-top: 10px;
-  background-color: #4BC8B3;
+  background-color: #4bc8b3;
   color: #fff;
   padding: 8px 16px;
   border: none;
@@ -295,18 +358,23 @@ h2 {
   transition: background-color 0.3s ease;
   font-size: 14px;
 }
+
 .recipe-details .read-more-button:hover {
-  background-color: #32D2C0;
+  background-color: #32d2c0;
 }
+
 /* Form styles */
+
 form {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
+
 label {
   margin-bottom: 10px;
 }
+
 input[type="submit"] {
   padding: 10px 20px;
   background-color: #333;
@@ -316,54 +384,66 @@ input[type="submit"] {
   font-size: 14px;
   cursor: pointer;
 }
+
 input[type="submit"]:hover {
   background-color: #555;
 }
+
 /* Search bar styles */
+
 .search-bar input[type="text"] {
   padding: 8px;
   border: none;
   border-radius: 4px;
   margin-right: 5px;
 }
+
 .search-bar button {
   padding: 8px 16px;
-  background-color: #3A5743;
+  background-color: #3a5743;
   color: white;
   border: none;
   border-radius: 4px;
   cursor: pointer;
 }
+
 .search-bar button:hover {
   background-color: #000000;
   cursor: pointer;
 }
+
 /* Top background styles */
+
 .top-background {
   width: 100%;
   height: 100px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #F2DD91;
+  background: #f2dd91;
 }
+
 .top-background h1 {
   font-size: 40px;
   font-weight: 700;
   color: #000000;
 }
+
 /* Other App styles */
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
 }
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
 }
+
 .App-header {
-  background-color: #282C34;
+  background-color: #282c34;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -372,9 +452,11 @@ input[type="submit"]:hover {
   font-size: calc(10px + 2vmin);
   color: white;
 }
+
 .App-link {
-  color: #61DAFB;
+  color: #61dafb;
 }
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -383,6 +465,7 @@ input[type="submit"]:hover {
     transform: rotate(360deg);
   }
 }
+
 ul {
   list-style-type: none;
   margin: 0;

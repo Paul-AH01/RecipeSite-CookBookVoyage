@@ -3,12 +3,9 @@ import jwt from "jsonwebtoken";
 import bcrypt from "bcrypt";
 import { UserModel } from "../models/Users.js";
 
-// the router allows us to create routes
 const router = express.Router();
 
-// this will allow us to register a new user in the database, and encrypt
-// their password, so that it is not stored in plain text. if the user already
-// exists, we will return a message saying so.
+
 router.post("/register", async (req, res) => {
   const { username, password } = req.body;
   const user = await UserModel.findOne({ username, password });

@@ -40,13 +40,6 @@ const RecipeSchema = new mongoose.Schema({
         ref: 'users', 
         required: true
     },
-    userRatings: [
-        {
-            type: mongoose.Schema.Types.ObjectId,
-            ref: 'ratings',
-            required: true
-        }
-    ]
 });
 
 export const RecipeModel = mongoose.model('recipes', RecipeSchema);

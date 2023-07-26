@@ -49,7 +49,7 @@ export const AddRecipes = () => {
   return (
     <div className="add-recipe">
       <form onSubmit={handleSubmit} >
-        <h2>Add Recipe</h2>
+        <h2 className="add-recipe-name">Add Recipe</h2>
         <label htmlFor="name">Name</label>
         <input type="text" id="name" name="name" onChange={handleChange} />
         <label htmlFor="servings">Servings</label>
