@@ -5,7 +5,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Home } from "./pages/Home";
 import { Auth } from "./pages/auth";
 import { AddRecipes } from "./pages/add-recipes";
-import { NavBar } from "./Components/Navbar";
+import { NavBar } from "./components/Navbar";
 import { Profile } from "./pages/profile";
 
 // this function is used to create app.
