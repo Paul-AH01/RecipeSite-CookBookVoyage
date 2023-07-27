@@ -38,10 +38,10 @@ export const AddRecipes = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-        const data = await  axios.post("https://cookbookvoyage.onrender.com/add-recipes", recipes);
+        const data = await  axios.post("http://localhost:3001/recipes", recipes);
         console.log(data);
         alert("Recipe added!");
-        // navigate("/");
+        navigate("/");
     } catch (err) {
         console.error(err);
     }        

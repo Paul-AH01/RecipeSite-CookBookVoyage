@@ -16,7 +16,7 @@ export const Home = () => {
   useEffect(() => {
     const fetchRecipes = async () => {
       try {
-        const response = await axios.get("https://cookbookvoyage.onrender.com");
+        const response = await axios.get("http://localhost:3001/recipes");
         setRecipes(response.data);
       } catch (err) {
         console.error(err);
