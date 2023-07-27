@@ -14,7 +14,7 @@ export const AddRecipes = () => {
     ingredients: [],
     instructions: "",
     imageUrl: "",
-    userId: userID,
+    userID: userID,
   });
 
   const navigate = useNavigate();
