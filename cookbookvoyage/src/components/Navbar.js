@@ -1,6 +1,6 @@
 import React from 'react';
-// import { Link } from 'react-router-dom';
-import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+
 import { useCookies } from "react-cookie";
 import { useNavigate } from "react-router-dom";
 export const NavBar = () => {
@@ -18,11 +18,11 @@ export const NavBar = () => {
     // otherwise it will display a logout button.
     return (
         <div className="navbar">
-            <NavLink exact to="/" activeClassName="activeLink">Home</NavLink>
-            {cookies.access_token && <NavLink to="/add-recipes" activeClassName="activeLink">Add Recipes</NavLink>}
-            {cookies.access_token && <NavLink to="/profile" activeClassName="activeLink">Profile</NavLink>}
+            <Link to="/" >Home</Link>
+            {cookies.access_token && <Link to="/add-recipes" >Add Recipes</Link>}
+            {cookies.access_token && <Link to="/profile" >Profile</Link>}
             {!cookies.access_token ? (
-                <NavLink to="/auth" activeClassName="activeLink">Login / Register</NavLink>
+                <Link to="/auth" >Login / Register</Link>
             ) : (
                 <button onClick={handleLogout} className='logoutBtn'>Logout</button>
             )}
