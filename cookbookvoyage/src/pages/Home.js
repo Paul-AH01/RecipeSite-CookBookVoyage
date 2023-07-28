@@ -93,13 +93,13 @@ export const Home = () => {
                 {isClickedRecipe ? "Hide Details" : "View Details"}
               </button>    
               <div className="share-buttons"><br />
-                  <FacebookShareButton url={"https://cookbookvoyage-back.onrender.com/recipes"} quote={recipe.name}>
+                  <FacebookShareButton url={`https://cookbookvoyage-back.onrender.com/recipes/${recipe._id}`} quote={recipe.name}>
                   <FacebookIcon size={32} round /> <br />               
                   </FacebookShareButton>
-                  <TwitterShareButton url={"https://cookbookvoyage-back.onrender.com/recipes"} title={recipe.name}>
+                  <TwitterShareButton url={`https://cookbookvoyage-back.onrender.com/recipes${recipe._id}`} quote={recipe.name}>
                   <TwitterIcon size={32} round /><br />
                   </TwitterShareButton>
-                  <EmailShareButton url={"https://cookbookvoyage-back.onrender.com/recipes"} subject={recipe.name}>
+                  <EmailShareButton url={`https://cookbookvoyage-back.onrender.com/recipes${recipe._id}`} quote={recipe.name}>
                   <EmailIcon size={32} round />
                   </EmailShareButton>
                 </div>
