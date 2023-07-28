@@ -17,9 +17,6 @@ app.use(express.json());
 
 app.use(cors({
   origin: ["https://cookbookvoyage.onrender.com",
-  "https://cookbookvoyage.onrender.com/auth",
-  "https://cookbookvoyage.onrender.com/add-recipes",
-  "https://cookbookvoyage.onrender.com/profile",
   "http://localhost:3000"]
 }));
 
