@@ -17,6 +17,7 @@ app.use(express.json());
 
 app.use(cors({
   origin: ["https://cookbookvoyage.onrender.com",
+  "https://cookbookvoyage-back.onrender.com",
   "http://localhost:3000"]
 }));
 
