@@ -15,9 +15,12 @@ router.get("/", async (req, res) => {
 });
 
 router.post("/", async (req, res) => {
+    console.log(req.body);
     const recipe = new RecipeModel(req.body);
+    
     try {
         const response = await recipe.save();
+        console.log(response);
         res.json(response);
     } catch (err) {
         res.json(err);
