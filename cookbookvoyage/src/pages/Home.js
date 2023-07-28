@@ -88,8 +88,8 @@ export const Home = () => {
               <h2>{recipe.name}</h2>
             </div>
             <div className="recipe-details">
-              <img src={recipe.imageUrl} alt={recipe.name} /> 
-              <button onClick={() => handleClick(recipe._id)}>
+              <img src={recipe.imageUrl} alt={recipe.name} /> <br />
+              <button className="info-btn" onClick={() => handleClick(recipe._id)}>
                 {isClickedRecipe ? "Hide Details" : "View Details"}
               </button>    
               <div className="share-buttons"><br />
