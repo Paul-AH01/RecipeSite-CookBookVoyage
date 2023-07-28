@@ -108,7 +108,7 @@ export const Profile = () => {
                   <p>Calories: {recipe.calories} (Kcal) </p>
                   <p>Ingredients: {recipe.ingredients}</p>
                   <p>Instructions: {recipe.instructions}</p>
-                  <p>User: {recipe.userId}</p>
+                  <p>User: {recipe.userID}</p>
                 </div>
               )}
             </li>
