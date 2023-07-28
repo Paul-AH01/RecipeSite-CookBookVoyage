@@ -18,7 +18,7 @@ export const Profile = () => {
       const fetchSavedRecipes = async () => {
         try {
           const response = await axios.get(
-            `https://cookbookvoyage-back.onrender.com`
+            `https://cookbookvoyage-back.onrender.com/recipes/savedRecipes/${userID}`
           );
           setSavedRecipes(response.data);
           console.log(response.data); 
@@ -71,13 +71,13 @@ export const Profile = () => {
               <div className="recipe-details">
                 <img src={recipe.imageUrl} alt={recipe.name} />
                 <div className="share-buttons"><br />
-                  <FacebookShareButton url={"https://cookbookvoyage-back.onrender.com"} quote={recipe.name}>
+                  <FacebookShareButton url={"https://cookbookvoyage-back.onrender.com/recipes"} quote={recipe.name}>
                   <FacebookIcon size={32} round /> <br />               
                   </FacebookShareButton>
-                  <TwitterShareButton url={"https://cookbookvoyage-back.onrender.com"} title={recipe.name}>
+                  <TwitterShareButton url={"https://cookbookvoyage-back.onrender.com/recipes"} title={recipe.name}>
                   <TwitterIcon size={32} round /><br />
                   </TwitterShareButton>
-                  <EmailShareButton url={"https://cookbookvoyage-back.onrender.com"} subject={recipe.name}>
+                  <EmailShareButton url={"https://cookbookvoyage-back.onrender.com/recipes"} subject={recipe.name}>
                   <EmailIcon size={32} round />
                   </EmailShareButton>
                 </div>
