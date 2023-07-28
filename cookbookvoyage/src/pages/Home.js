@@ -16,7 +16,7 @@ export const Home = () => {
   useEffect(() => {
     const fetchRecipes = async () => {
       try {
-        const response = await axios.get("http://localhost:3001/recipes");
+        const response = await axios.get("https://cookbookvoyage-back.onrender.com");
         setRecipes(response.data);
       } catch (err) {
         console.error(err);
@@ -26,7 +26,7 @@ export const Home = () => {
     const fetchSavedRecipes = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:3001/recipes/savedRecipes/id/${userID}`
+          `https://cookbookvoyage-back.onrender.com`
         );
         setSavedRecipes(response.data.savedRecipes);
         console.log(response.data);
@@ -41,7 +41,7 @@ export const Home = () => {
 
   const saveRecipe = async (recipeId) => {
     try {
-      await axios.put("http://localhost:3001/recipes", { recipeId, userID });
+      await axios.put("https://cookbookvoyage-back.onrender.com", { recipeId, userID });
     } catch (err) {
       console.error(err);
     }
@@ -93,13 +93,13 @@ export const Home = () => {
                 {isClickedRecipe ? "Hide Details" : "View Details"}
               </button>    
               <div className="share-buttons"><br />
-                  <FacebookShareButton url={"http://localhost:3001/recipes"} quote={recipe.name}>
+                  <FacebookShareButton url={"https://cookbookvoyage-back.onrender.com"} quote={recipe.name}>
                   <FacebookIcon size={32} round /> <br />               
                   </FacebookShareButton>
-                  <TwitterShareButton url={"http://localhost:3001/recipes"} title={recipe.name}>
+                  <TwitterShareButton url={"https://cookbookvoyage-back.onrender.com"} title={recipe.name}>
                   <TwitterIcon size={32} round /><br />
                   </TwitterShareButton>
-                  <EmailShareButton url={"http://localhost:3001/recipes"} subject={recipe.name}>
+                  <EmailShareButton url={"https://cookbookvoyage-back.onrender.com"} subject={recipe.name}>
                   <EmailIcon size={32} round />
                   </EmailShareButton>
                 </div>

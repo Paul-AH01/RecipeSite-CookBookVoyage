@@ -31,7 +31,7 @@ const Login = ({ toggleComponent }) => {
     const handleSubmit = async (event) => {
         event.preventDefault();
         try {
-            const response = await axios.post("http://localhost:3001/authenticate/login", {
+            const response = await axios.post("https://cookbookvoyage-back.onrender.com", {
                 username,
                 password,
             });
@@ -84,7 +84,7 @@ const Register = ({ toggleComponent }) => {
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      await axios.post("http://localhost:3001/authenticate/register", {
+      await axios.post("https://cookbookvoyage-back.onrender.com", {
         username,
         password,
       });
